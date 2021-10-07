@@ -46,7 +46,7 @@ int main(int argc, char const *argv[])
                 b_s += brigh_arr[index];
             }
 	    float avr_br = b_s/(block*block);
-            b[y*WIDTH_L + x] = " .:-=+*#%@"[(int)(10*(avr_br/255))];
+            b[y*WIDTH_L + x] = " .'`^\",:;Il!i><~+_-?][}{1)(|\\/tfjrxnuvczXYUJCLQ0OZmwqpdbkhao*#MW&8%B@$"[(int)(70*(avr_br/255))];
         }
     }
     print_image(b, HEIGHT_L*WIDTH_L); 
