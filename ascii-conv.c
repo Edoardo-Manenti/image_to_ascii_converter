@@ -55,13 +55,13 @@ int main(int argc, char const *argv[])
     // Starting from top left corner
     for(int x=0; x<WIDTH_L; x++){
         for(int y=0; y<HEIGHT_L; y++){
-	    // calculate the value of the first index of the block of pixel
+	    // calculate the index of the first pixel of the block
 	    int s_i = block*(y*width + x);
 	    b_s = 0; // total sum of the brightness of the pixels in the block
-            for(int i=0; i< block*block; i++){
-                    index = s_i + (i/block)*width + i%block;
-                b_s += brigh_arr[index];
-            }
+        for(int i=0; i< block*block; i++){
+                index = s_i + (i/block)*width + i%block;
+            b_s += brigh_arr[index];
+        }
 	    float avr_br = b_s/(block*block); // average brightess level of the block
 	    // string of luminance values from darkest to brightest 
 	    // the average brightness is first trasposed in the range [0..1].
